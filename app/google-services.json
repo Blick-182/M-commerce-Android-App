@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "478328006757",
+    "firebase_url": "https://blacklight-7c87f.firebaseio.com",
+    "project_id": "blacklight-7c87f",
+    "storage_bucket": "blacklight-7c87f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478328006757:android:7cd5258e508764d3337e8c",
+        "android_client_info": {
+          "package_name": "com.example.blacklight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478328006757-eetktappatcmk60lsa6g4lq8m6k960v8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blacklight",
+            "certificate_hash": "313f2a8303bb67136fba2e3e624d14c8743bf727"
+          }
+        },
+        {
+          "client_id": "478328006757-mbgie4n638atakeuhfd81s110gfln7ch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvlWD0Ry4Ao3PLwucG_COCx7cRBDANY2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478328006757-mbgie4n638atakeuhfd81s110gfln7ch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

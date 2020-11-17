@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="#212121"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/add_inventory_secondary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/merchant_new_order_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:text="@string/customer"
+                android:textColor="@color/white"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="18sp"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:id="@+id/merchant_new_order_customer_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/phone_number"
+                android:textColor="@color/white"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/merchant_new_order_customer_pickup_spot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:text="@string/pick_up_spot"
+                android:textColor="@color/white"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="15sp"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:id="@+id/merchant_new_order_customer_order_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/total_amount"
+                android:textColor="@color/white"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/merchant_new_order_customer_ordered_at"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="@string/order_date_and_time"
+            android:textColor="@color/white"
+            android:fontFamily="@font/raleway_bold"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/show_order_details_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:backgroundTint="#212121"
+            app:icon="@drawable/ic_baseline_local_offer_24"
+            android:text="@string/order_details"
+            android:fontFamily="@font/raleway_bold"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total_amount_price_linear_layout"
+            app:layout_constraintVertical_bias="0.0"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

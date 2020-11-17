@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    android:background="@color/black">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/edit_profile_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#212121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/edit_profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            app:title="Edit Profile"
+            app:titleTextColor="@color/white"
+            app:titleMarginStart="10dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/edit_profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/add_a_profile_picture"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/edit_profile_card_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="350dp"
+        android:backgroundTint="#212121"
+        app:cardBackgroundColor="@color/orange_light"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_title"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/edit_profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_title" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/edit_profile_add_image"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/tap_to_add_image"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:icon="@drawable/ic_baseline_photo_camera_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_card_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/edit_profile_shipping_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/edit_your_shipping_details"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_add_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/edit_profile_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_shipping_details">
+
+        <EditText
+            android:id="@+id/edit_profile_first_name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/first_name"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:fontFamily="@font/raleway_medium"
+            android:background="@drawable/input_text_design"/>
+
+        <EditText
+            android:id="@+id/edit_profile_last_name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:hint="@string/second_name"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:fontFamily="@font/raleway_medium"
+            android:background="@drawable/input_text_design"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_profile_county"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="200dp"
+        android:autofillHints="test@blacklight.com"
+        android:background="@drawable/input_text_design"
+        android:hint="@string/county"
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:fontFamily="@font/raleway_medium"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_names"
+        app:layout_constraintVertical_bias="0.119" />
+
+
+    <LinearLayout
+        android:id="@+id/edit_profile_nearest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_county">
+
+        <EditText
+            android:id="@+id/edit_profile_sub_county"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:hint="@string/sub_county"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:fontFamily="@font/raleway_medium"
+            android:background="@drawable/input_text_design"/>
+
+        <EditText
+            android:id="@+id/edit_profile_town_or_city"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="15dp"
+            android:hint="@string/town_or_city"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:fontFamily="@font/raleway_medium"
+            android:background="@drawable/input_text_design"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_profile_apartment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="200dp"
+        android:autofillHints="test@blacklight.com"
+        android:background="@drawable/input_text_design"
+        android:hint="@string/pick_up_spot"
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:fontFamily="@font/raleway_medium"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_nearest"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <Button
+        android:id="@+id/edit_profile_save_now"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/save_now"
+        android:fontFamily="@font/raleway_bold"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_apartment"
+        app:layout_constraintVertical_bias="0.119"
+        android:onClick="getCustomerShippingDetails"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MerchantChooseInventoryCategoryActivity"
+    android:background="@color/black"
+    android:isScrollContainer="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/merchant_choose_category_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#212121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/merchant_choose_category_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            android:onClick="sendToMerchantStore"
+            app:title="Choose inventory category"
+            app:titleMarginStart="10dp"
+            app:titleTextColor="@color/white"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_tablet_category_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/add_inventory_secondary"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/merchant_choose_category_appbar">
+
+        <ImageView
+            android:id="@+id/add_phone_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/iphone"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@string/phones_and_tablets" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/add_phone_title"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phones_and_tablets"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp" />
+
+            <Button
+                android:id="@+id/add_phone_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_inventory"
+                android:fontFamily="@font/raleway_bold"
+                android:onClick="sendToAddNewProduct"
+                android:layout_marginStart="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/laptop_PCs_category_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/add_inventory"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/phone_tablet_category_linear_layout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/add_laptop_title"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/laptops_and_pcs"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp" />
+
+            <Button
+                android:id="@+id/add_laptop_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_inventory"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/orange_light"
+                android:onClick="sendToAddNewProduct"
+                android:layout_marginStart="20dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/add_laptop_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/macbook"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/laptops_and_pcs" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/TV_monitor_category_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/add_inventory_secondary"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/laptop_PCs_category_linear_layout">
+
+        <ImageView
+            android:id="@+id/add_TVs_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/imac"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@string/tvs_and_monitors" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/add_TVs_title"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvs_and_monitors"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp" />
+
+            <Button
+                android:id="@+id/add_TV_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_inventory"
+                android:fontFamily="@font/raleway_bold"
+                android:onClick="sendToAddNewProduct"
+                android:layout_marginStart="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accessories_category_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/add_inventory"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/TV_monitor_category_linear_layout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/add_accessories_title"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/accessories"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp" />
+
+            <Button
+                android:id="@+id/add_accessories_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_inventory"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/orange_light"
+                android:onClick="sendToAddNewProduct"
+                android:layout_marginStart="20dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/add_accessories_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/headphones"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/accessories" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/kitchen_appliances_category_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/add_inventory_secondary"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/accessories_category_linear_layout">
+
+        <ImageView
+            android:id="@+id/add_kitchen_appliances_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/refrigerator"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@string/kitchen_appliances" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/add_kitchen_appliances_title"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kitchen_appliances"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp" />
+
+            <Button
+                android:id="@+id/add_kitchen_appliances_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_inventory"
+                android:fontFamily="@font/raleway_bold"
+                android:onClick="sendToAddNewProduct"
+                android:layout_marginStart="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

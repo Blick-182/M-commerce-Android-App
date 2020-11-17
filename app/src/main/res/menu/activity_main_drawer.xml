@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_storefront_24"
+            android:title="@string/menu_home"
+            android:onClick="sendToHomeActivity"/>
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_baseline_search_24"
+            android:title="Search"
+            android:onClick="sendToSearchActivity"/>
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_person_pin_24"
+            android:title="@string/profile"
+            android:onClick="sendToProfileActivity"/>
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_baseline_category_24"
+            android:title="@string/shop_by_category"
+            android:onClick="sendToShopByCategoryActivity"/>
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_baseline_add_shopping_cart_24"
+            android:title="@string/cart"
+            android:onClick="sendToCartActivity"/>
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_baseline_card_giftcard_24"
+            android:title="@string/orders"
+            android:onClick="sendToOrdersActivity"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/settings"
+            android:onClick="sendToSettingsActivity"/>
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_baseline_feedback_24"
+            android:title="@string/feedback"
+            android:onClick="sendToFeedbackActivity"/>
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:title="@string/sign_out"
+            android:onClick="signOutCustomerActivity"/>
+    </group>
+</menu>
