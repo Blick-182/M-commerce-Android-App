@@ -92,7 +92,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
         if (state.equals("Order placed") || state.equals("Order delivered")){
 
-            Snackbar.make(view, "Continue shopping after your pending order has been delivered", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            Snackbar.make(view, "Continue shopping after your pending order is delivered", Snackbar.LENGTH_LONG).setAction("Action", null).show();
         }
         else {
             addToCart();

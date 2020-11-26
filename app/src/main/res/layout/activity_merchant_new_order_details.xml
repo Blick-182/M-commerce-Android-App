@@ -41,7 +41,7 @@
             android:id="@+id/merchant_new_orders_details_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="5dp"
             app:layout_constraintTop_toBottomOf="@+id/merchant_new_order_details_appbar">
 

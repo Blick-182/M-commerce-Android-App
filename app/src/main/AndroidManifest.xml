@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Blacklight"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".MerchantUpdateInventoryActivity"></activity>
+        <activity android:name=".SearchActivity" />
         <activity android:name=".MerchantNewOrderDetailsActivity" />
         <activity android:name=".FeedbackActivity" />
         <activity android:name=".MerchantNewOrdersActivity" />

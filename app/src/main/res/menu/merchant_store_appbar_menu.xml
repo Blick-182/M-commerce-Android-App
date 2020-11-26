@@ -3,9 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/edit_profile_close"
+        android:id="@+id/merchant_store_orders"
+        android:icon="@drawable/ic_baseline_local_offer_24"
+        android:title="@string/merchant"
+        app:showAsAction="always"
+        android:onClick="showMerchantOrders"/>
+
+    <item
+        android:id="@+id/merchant_store_profile"
+        android:icon="@drawable/ic_baseline_person_pin_24"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom"
+        android:onClick="sendToMerchantProfile"/>
+
+    <item
+        android:id="@+id/merchant_store_sign_out"
         android:icon="@drawable/ic_baseline_power_settings_new_24"
-        android:title="@string/home_search_title"
+        android:title="@string/sign_out"
         app:showAsAction="always"
         android:onClick="signOutMerchant"/>
 

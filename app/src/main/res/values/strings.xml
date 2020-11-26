@@ -99,4 +99,10 @@
     <string name="order_date_and_time">Order Date and Time</string>
     <string name="order_details">Order Details</string>
     <string name="search_for_products_or_store">Search for products or store</string>
+    <string name="food_and_drinks">Food and Drinks</string>
+    <string name="stationary">Stationary</string>
+    <string name="e_books">E-books</string>
+    <string name="toiletries">Toiletries</string>
+    <string name="alcohol_and_cocktails">Alcohol and Cocktails</string>
+    <string name="movies_and_tv_series">Movies and TV Series</string>
 </resources>

@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.blacklight.Models.Cart;
 import com.example.blacklight.ViewHolder.CartViewHolder;
@@ -22,9 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MerchantNewOrderDetailsActivity extends AppCompatActivity {
 
     private Toolbar merchantNewOrderDetailsToolbar;
-
     private RecyclerView merchantNewOrderDetails_recyclerView;
-    RecyclerView.LayoutManager layoutManager;
 
     private DatabaseReference cartRef;
 
@@ -43,11 +43,8 @@ public class MerchantNewOrderDetailsActivity extends AppCompatActivity {
         setSupportActionBar(merchantNewOrderDetailsToolbar);
 
         merchantNewOrderDetails_recyclerView = findViewById(R.id.merchant_new_orders_details_recyclerview);
-        merchantNewOrderDetails_recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        merchantNewOrderDetails_recyclerView.setLayoutManager(layoutManager);
-
-        onStart();
+        merchantNewOrderDetails_recyclerView.setLayoutManager(new LinearLayoutManager(this));
+       // merchantNewOrderDetails_recyclerView.setHasFixedSize(true);
     }
 
     @Override
@@ -56,25 +53,38 @@ public class MerchantNewOrderDetailsActivity extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Cart> options = new FirebaseRecyclerOptions.Builder<Cart>().setQuery(cartRef, Cart.class).build();
 
-        FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
+        FirebaseRecyclerAdapter<Cart, MerchantCartViewHolder> adapter = new FirebaseRecyclerAdapter<Cart, MerchantCartViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull CartViewHolder cartViewHolder, int i, @NonNull Cart cart) {
+            protected void onBindViewHolder(@NonNull MerchantCartViewHolder merchantCartViewHolder, int i, @NonNull Cart cart) {
 
-                cartViewHolder.cartProductName.setText(cart.getName());
-                cartViewHolder.cartProductQuantity.setText(cart.getQuantity());
-                cartViewHolder.cartProductPrice.setText(cart.getPrice());
+                merchantCartViewHolder.merchantCartProductName.setText(cart.getName());
+                merchantCartViewHolder.merchantCartProductQuantity.setText(cart.getQuantity());
+                merchantCartViewHolder.merchantCartProductPrice.setText(cart.getPrice());
 
             }
 
             @NonNull
             @Override
-            public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_items_layout, parent, false);
-                return new CartViewHolder(view);
+            public MerchantCartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.merchant_cart_items_layout, parent, false);
+                return new MerchantCartViewHolder(view);
             }
         };
         merchantNewOrderDetails_recyclerView.setAdapter(adapter);
         adapter.startListening();
+    }
+
+    public static class MerchantCartViewHolder extends RecyclerView.ViewHolder{
+
+        public TextView merchantCartProductName, merchantCartProductQuantity, merchantCartProductPrice;
+
+        public MerchantCartViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            merchantCartProductName = itemView.findViewById(R.id.merchant_cart_product_name);
+            merchantCartProductQuantity = itemView.findViewById(R.id.merchant_cart_product_quantity);
+            merchantCartProductPrice = itemView.findViewById(R.id.merchant_cart_product_price);
+        }
     }
 
     public void redirectToDisplayMerchantNewOrders(View view) {
